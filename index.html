@@ -57,6 +57,9 @@
             align-items: center;
             justify-content: center;
         }
+        .secundario-txt{
+            margin-top: 200px;
+        }
         .tecnologias{
             max-width: 900px;
             height: 60px;
@@ -70,7 +73,6 @@
         .shadow-box{
             width: 50px;
             height: 50px;
-            position: absolute;
             border-radius: 100%;
             box-shadow: 0px 0px 150px 200px var(--shadow);
             background-color: var(--shadow);
@@ -114,7 +116,6 @@
         .about-me{
             width: 100%;
             min-height: 100vh;
-            overflow: v;
             color: white;
             display: flex;
             justify-content: space-evenly;
@@ -134,10 +135,10 @@
         display: flex;
         color: white;
         font-family: var(--font-padrao);
-        font-size: 40px;
-        text-align: left;
+        font-size: 35px;
+        text-align: center;
         z-index: 1;
-        margin-top: 300px;
+        margin-top: 500px;
         animation: aparecer-txt linear;
         animation-timeline: view();
         animation-range: entry 0% cover 50%;
@@ -154,9 +155,8 @@
         }
       }
        .robo-png{
-        width: 700px;
-        height: 700px;
-        margin-top: -400px;
+        max-width: 100%;
+        height: auto; 
         animation: aparecer_animacao linear;
         animation-timeline: view();
         animation-range: entry 0% cover 50%;
@@ -164,7 +164,7 @@
        @keyframes aparecer_animacao{
 
         from{
-            transform: translateX(200px);
+            transform: translateX(100px);
            
         }
          to {
@@ -175,16 +175,14 @@
 
        }
        .space-box-robo-png{
-        margin-right: -1200px;
+        margin-top: -160px    ;
        }
        .shadow-box-about-me{
         width: 200px;
         height: 200px;
         border-radius: 100%;
         background-color: var(--shadow);
-        position: absolute;
-        margin-top: -400px;
-        margin-right: 1600px;
+        margin-top: 20px;
         box-shadow: 0px 0px 100px 100px var(--shadow);
         z-index: 0;
        }
@@ -289,21 +287,127 @@
        .shadow-box-1{
         width: 200px;
         height: 200px;
-        position: absolute;
         border-radius: 100%;
         box-shadow: 350px 350px 200px 170px rgba(255, 255, 0, 0.329);
-        margin-left: 1000px;
+        margin-right: -50%;
         margin-top: -130px;
        }
        .box-shadow-2{
         width: 200px;
         height: 200px;
-        position: absolute;
         border-radius: 100%;
         box-shadow: 350px 350px 200px 200px rgba(255, 255, 0, 0.329);
        margin-right: 2100px;
-       margin-top: 200px;
+       margin-top: -400px;
        }
+       @media(max-width: 1350px){
+
+        .foto-div{
+            width: 300px;
+            height: 300px;
+        }
+        .princiapal-txt{
+            font-size: 20px;
+        }
+        .txt-box-about-me{
+            font-size: 25px;
+        }
+
+       }    
+       @media(max-width:960px){
+        .txt-box-about-me{
+            font-size: 30px;
+            width: 600px;
+            margin-top: 400px;
+        }
+        .space-box-robo-png{
+            width: 400px;
+            height: 400px;
+            margin-top: -300px;
+        }
+        .formulario-box{
+            width: 500px;
+            height: 650px;
+        }
+        .msg-formulario{
+            width: 400px;
+        }
+        .h1-contato{
+            font-size: 30px;
+        }
+         .foto-div{
+            width: 200px;
+            height: 200px;
+        }
+         .princiapal-txt{
+            font-size: 15px;
+        }
+        .txt-box-about-me{
+            font-size: 15px;
+        }
+        .principal-button{
+            width: 180px;
+            height: 60px;
+        }
+       }
+       @media(max-width:700px){
+        .foto-div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            margin-top: -500px;
+            z-index: 2;
+        }
+       }
+       @media(max-width:530px){
+        .txt-box-about-me{
+            width: 250px;
+            margin-top: 300px;
+        }
+        .formulario-box{
+            width: 300px;
+            height: 650px;
+        }
+        .msg-formulario{
+            width: 250px;
+        }
+         .h1-formulario{
+        font-size: 15px;
+       }
+       .input-formulario-txt{
+        text-align: start;
+       }
+       .shadow-box-1{
+        margin-right: 300px;
+       }
+       .box-shadow-2{
+        margin-left: 500px;
+        margin-top: -600px;
+       }
+        .princiapal-txt{
+            font-size: 10px;
+            width: 90%;
+        }
+        .secundario-txt{
+            margin-top: 150px;
+        }
+        .principal-button{
+            height: 40px;
+            width: 150px;
+            font-size: 10px;
+        }
+        .button-div{
+            justify-content: space-evenly;
+        }
+        .shadow-box-1{
+            display: none;
+        }
+        .box-shadow-2{
+            display: none;
+        }
+        
+       }
+      
     </style>
 </head>
 <body>
@@ -312,7 +416,7 @@
         <div class="princiapal-txt">
         <h1>Ryan Marques Monteiro Falcao</h1>
         <div class="shadow-box"></div>
-        <p>Estudante de Engenharia de software</p>
+        <p class="secundario-txt">Estudante de Engenharia de software</p>
         <div class="tecnologias">
             <svg  class="tecnologias-img" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M0 0h256v256H0V0z" fill="#F7DF1E"></path><path d="M67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371 7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259-19.245 0-30.416-9.967-36.087-21.996M152.381 211.354l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607 9.969 0 16.325-4.984 16.325-11.858 0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257 0-18.044 13.747-31.792 35.228-31.792 15.294 0 26.292 5.328 34.196 19.247L210.29 147.43c-4.125-7.389-8.591-10.31-15.465-10.31-7.046 0-11.514 4.468-11.514 10.31 0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804 0 21.654-17.012 33.51-39.867 33.51-22.339 0-36.774-10.654-43.819-24.574"></path></g></svg>
            <svg class="tecnologias-img" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"></path> <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"></path> <path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"></path> </g></svg>
@@ -324,9 +428,6 @@
         
     </section>
     <section id="about-me" class="about-me">
-        <div class="shadow-box-about-me">
-
-        </div>
         <div class="space-txt-about-me">
                 <div class="foto-div-about-me">
 
@@ -339,7 +440,9 @@
                 </div>
                 
         </div>
+ <div class="shadow-box-about-me">
 
+        </div>
         <div class="space-box-robo-png">
                 <img class="robo-png" src="mao_robotica.png" alt="">
         </div>
